@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
+.dark {
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  min-height: 100vh;
+  background: black;
+}
+
+.lw {
+  position: absolute;
+  top: -2;
+  text-align: center;
+  color: white;
+  font-family: 'Palette Mosaic', cursive;
+}
+.calculator {
+  position: relative;
+  bottom: -39px;
+  display: grid;
+}
+.calculator .value {
+  grid-column: span 4;
+  height: 100px;
+  text-align: center;
+  border: none;
+  outline: none;
+  padding: 10vh;
+  font-size: 28px;
+  text-align: right;
+  background: #fff;
+}
+.calculator span {
+  display: grid;
+  width: 125px;
+  height: 80px;
+  color: #fff;
+  background-color: #001247;
+  place-items: center;
+  border: 1px solid rgba(0,0,0,.1);
+  font-size: 22px;
+  transition: all 0.6s ease;
+}
+
+.calculator span:hover {
+  background: #000938;
+}
+.calculator span.clear {
+  grid-column: span 2;
+  width: 252px;
+  background: #004a57;
+  font-size: 35px;
+  transition: all 0.5s;
+}
+.calculator span.clear:hover {
+  background: #00756d;
+}
+.calculator span.plus {
+  grid-row: span 2;
+  height: 162px;
+}
+.calculator span.eval {
+  background: #230085;
+  color: black;
+}
+.calculator span.eval:hover {
+  background: #005ef5;
+}
+</style>
+
+
+<title>touch totalizer</title>
+</head>
+<body class="dark">
+  <h1 class="lw">
+
+<div>touch totalizer</div>
+  </h1>
+  <form class="calculator" name="calc">    
+<input class="value" type="text" name="txt" readonly="">
+  <span class="num clear" onclick="document.calc.txt.value =''">c</span>
+  <span class="num" onclick="document.calc.txt.value +='/'">/</span>
+  <span class="num" onclick="document.calc.txt.value +='*'">*</span>
+  <span class="num" onclick="document.calc.txt.value +='7'">7</span>
+  <span class="num" onclick="document.calc.txt.value +='8'">8</span>
+  <span class="num" onclick="document.calc.txt.value +='9'">9</span>
+  <span class="num" onclick="document.calc.txt.value +='-'">-</span>
+  <span class="num" onclick="document.calc.txt.value +='4'">4</span>
+  <span class="num" onclick="document.calc.txt.value +='5'">5</span>
+  <span class="num" onclick="document.calc.txt.value +='6'">6</span>
+  <span class="num plus" onclick="document.calc.txt.value +='+'">+</span>
+  <span class="num" onclick="document.calc.txt.value +='3'">3</span>
+  <span class="num" onclick="document.calc.txt.value +='2'">2</span>
+  <span class="num" onclick="document.calc.txt.value +='1'">1</span>
+  <span class="num" onclick="document.calc.txt.value +='0'">0</span>
+  <span class="num" onclick="document.calc.txt.value +='00'">00</span>
+  <span class="num" onclick="document.calc.txt.value +='.'">.</span>
+  <span class="num eval" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
+  </form>
+
+<script>// Write JavaScript here </script></body>
